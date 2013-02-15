@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Delicious Bookmarks",
+  "description": "Delicious Bookmarks.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/del.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+	"storage",
+	"background",
+	"tabs",
+	"https://api.delicious.com/*",
+	"https://api.del.icio.us/v1/*"
+  ],
+
+  "options_page": "options.html",
+
+  "background":{
+    "persistent": true,
+    "scripts": ["js/jquery-1.9.1.min.js","js/sha1.js","js/background.js"]
+  }
+}
